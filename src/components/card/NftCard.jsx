@@ -1,8 +1,8 @@
 import { IoHeart, IoHeartOutline } from "react-icons/io5";
 import { useState } from "react";
 import Card from "components/card";
-import { WarningOutlined } from '@ant-design/icons';
-import { ShoppingCartOutlined } from '@ant-design/icons';
+import { MdWarningAmber } from "react-icons/md";
+import { BsMinecartLoaded } from "react-icons/bs";
 
 
 
@@ -41,7 +41,7 @@ const NftCard = ({ title, author, price, image, road, extra ,id,selected }) => {
             </div>
           </button>
           {!road ? <span className="absolute top-2 left-2 flex items-center justify-center px-2 py-1  text-[14px] text-red-700 rounded-xl bg-white/10 backdrop-blur-xl dark:bg-[#0b14374d] ">
-            <WarningOutlined className="w-[20px] h-[20px]" /> <span className= "">Not Allowed On The Road</span>
+            <MdWarningAmber className="w-[16px] h-[16px]" /> <span className= "">Not Allowed On The Road</span>
           </span> : <></>}
           
         </div>
@@ -66,7 +66,7 @@ const NftCard = ({ title, author, price, image, road, extra ,id,selected }) => {
           <button
             className={`linear rounded-[20px] ${selectcss} px-4 py-2 text-base font-medium text-white transition duration-200 hover:bg-brand-800 active:bg-brand-700 dark:${selectcss} dark:hover:bg-brand-300 dark:active:opacity-90`}
           >
-            {selectBtn} <ShoppingCartOutlined />
+            {selectBtn} <BsMinecartLoaded className="inline w-[16px] h-[16px]" />
           </button>
           
         </div>
